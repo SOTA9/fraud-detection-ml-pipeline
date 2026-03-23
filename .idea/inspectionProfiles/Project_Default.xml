@@ -1,0 +1,24 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <list>
+          <option value="pyspark" />
+          <option value="google-cloud-pubsub" />
+          <option value="google-cloud-bigquery" />
+          <option value="apache-airflow" />
+          <option value="apache-airflow-providers-google" />
+          <option value="google-cloud-storage" />
+          <option value="pandas" />
+          <option value="pyarrow" />
+          <option value="Pillow" />
+          <option value="opencv-python" />
+          <option value="selenium" />
+          <option value="beautifulsoup4" />
+          <option value="webdriver-manager" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

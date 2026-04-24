@@ -1,0 +1,24 @@
+project: fraud_detection
+registry: s3://my-feast-registry/registry.pb
+provider: local
+
+online_store:
+  type: redis
+  connection_string: "redis:6379"
+
+offline_store:
+  type: postgres
+  host: localhost
+  port: 5432
+  database: fraud
+  db_schema: fraud_features
+  user: fraud
+  password: ${FEAST_PG_PASSWORD}
+
+feature_server:
+  enabled: true
+  port: 6566
+
+flags:
+  alpha_features: true
+  on_demand_transforms: true

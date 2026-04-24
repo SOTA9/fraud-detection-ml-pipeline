@@ -1,0 +1,59 @@
+# ------------------------------
+# Environment
+# ------------------------------
+environment: development
+
+# ------------------------------
+# Kafka configuration
+# ------------------------------
+kafka:
+  bootstrap_servers: "localhost:9092"
+  schema_registry_url: "http://localhost:8081"
+  topic_raw: "raw-transactions"
+  topic_fraud: "fraud-alerts"
+  topic_cleared: "cleared-transactions"
+
+# ------------------------------
+# Redis configuration
+# ------------------------------
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+
+# ------------------------------
+# Postgres configuration
+# ------------------------------
+postgres:
+  host: localhost
+  port: 5432
+  database: fraud
+  user: fraud
+  password: fraud
+  schema: fraud_features
+
+# ------------------------------
+# Feast configuration
+# ------------------------------
+feast:
+  repo_path: "./feast"
+
+# ------------------------------
+# Spark configuration
+# ------------------------------
+spark:
+  checkpoint_dir: "/tmp/fraud_checkpoints"
+  shuffle_partitions: 4
+
+# ------------------------------
+# Machine Learning configuration
+# ------------------------------
+ml:
+  model_path: "ml/fraud_model.pkl"
+  fraud_threshold: 0.85
+
+# ------------------------------
+# Logging configuration
+# ------------------------------
+logging:
+  level: DEBUG

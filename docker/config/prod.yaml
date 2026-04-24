@@ -1,0 +1,61 @@
+# ------------------------------
+# Environment
+# ------------------------------
+environment: production
+
+# ------------------------------
+# Kafka configuration
+# ------------------------------
+kafka:
+  bootstrap_servers: "${BOOTSTRAP_SERVERS}"
+  schema_registry_url: "${SCHEMA_REGISTRY_URL}"
+  topic_raw: "raw-transactions"
+  topic_fraud: "fraud-alerts"
+  topic_cleared: "cleared-transactions"
+
+# ------------------------------
+# Redis configuration
+# ------------------------------
+redis:
+  host: "${REDIS_HOST}"
+  port: 6379
+  db: 0
+  ssl: true
+
+# ------------------------------
+# Postgres configuration
+# ------------------------------
+postgres:
+  host: "${PG_HOST}"
+  port: 5432
+  database: fraud
+  user: "${PG_USER}"
+  password: "${PG_PASSWORD}"
+  schema: fraud_features
+  pool_size: 20
+
+# ------------------------------
+# Feast configuration
+# ------------------------------
+feast:
+  repo_path: "${FEAST_REPO_PATH}"
+
+# ------------------------------
+# Spark configuration
+# ------------------------------
+spark:
+  checkpoint_dir: "s3a://my-bucket/checkpoints"
+  shuffle_partitions: 200
+
+# ------------------------------
+# Machine Learning configuration
+# ------------------------------
+ml:
+  model_path: "s3://my-bucket/models/fraud_model.pkl"
+  fraud_threshold: 0.85
+
+# ------------------------------
+# Logging configuration
+# ------------------------------
+logging:
+  level: INFO

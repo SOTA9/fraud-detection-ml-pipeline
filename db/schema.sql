@@ -1,7 +1,7 @@
 -- ------------------------------
 -- Create schema
 -- ------------------------------
-CREATE SCHEMA IF NOT EXISTS yvan_features;
+CREATE SCHEMA IF NOT EXISTS fraud_features;
 
 -- ------------------------------
 -- User-level aggregated features
